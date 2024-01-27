@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+// responsive design mixins
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+// spacing mixins
+@mixin padding-screen {
+    padding: 0rem 2rem;
+
+    @include tablet {
+        padding: 0rem 4.5rem;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+        max-width: 136rem;
+    }
+}
