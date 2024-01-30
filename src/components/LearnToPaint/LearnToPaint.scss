@@ -1,0 +1,47 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+.learn-to-paint {
+    background-color: $primary-four;
+    font-family: "Archivo", sans-serif;
+    color: $primary-three;
+    @include padding-screen;
+
+    &__divider {
+        border-top: 1px solid $primary-two;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    &__header {
+        background-color: $primary-one;
+        @include section-header;
+        padding: 1rem 2rem 0.5rem;
+        border-radius: 2.5rem 2.5rem 0rem 0rem;
+        margin-top: 2rem;
+    }
+    &__details {
+        background-color: $primary-one;
+        @include body-copy;
+        padding: 1rem 2rem 2rem;
+        border-radius: 0rem 0rem 2.5rem 2.5rem;
+    }
+
+    &__link {
+        background-color: $primary-one;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:visited {
+            color: $primary-three;
+        }
+    }
+}

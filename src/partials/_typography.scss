@@ -11,7 +11,7 @@
 
 @mixin section-header {
     font-family: "Archivo-Black", sans-serif;
-    font-size: 1.5rem;
+    font-size: 3.75rem;
 }
 
 @mixin subheader {
@@ -27,6 +27,7 @@
 @mixin body-copy {
     font-family: "Archivo", sans-serif;
     font-size: 2rem;
+    line-height: 1.25;
 
     @include tablet {
         font-size: 1.75rem;
