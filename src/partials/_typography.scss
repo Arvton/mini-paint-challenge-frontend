@@ -2,7 +2,7 @@
 
 @mixin page-header {
     font-family: "Archivo-Black", sans-serif;
-    font-size: 5.5rem;
+    font-size: 5rem;
 
     @include tablet {
         font-size: 4.125rem;
