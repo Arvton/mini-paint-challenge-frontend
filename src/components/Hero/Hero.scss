@@ -27,7 +27,6 @@
             background-color: $primary-four;
             display: flex;
             flex-direction: column;
-            bottom: 6rem;
         }
 
         &-details {
@@ -36,6 +35,7 @@
         }
 
         &-cta {
+            background-color: $primary-three;
             @include labels-and-buttons;
             line-height: 1;
             padding: 2rem 0rem;
