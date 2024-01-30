@@ -20,7 +20,7 @@
         }
 
         &-img {
-            @include border-radius;
+            @include border-radius-card;
         }
 
         &-container {
@@ -31,7 +31,6 @@
 
         &-details {
             @include body-copy;
-            line-height: 1.25;
         }
 
         &-cta {
@@ -39,12 +38,17 @@
             @include labels-and-buttons;
             line-height: 1;
             padding: 2rem 0rem;
-            @include border-radius;
+            @include border-radius-button;
             margin: 2rem 0rem;
             cursor: pointer;
             transition: background-color 0.4s linear;
 
             &:hover {
+                background-color: $primary-one;
+                color: $secondary-four;
+            }
+
+            &:focus {
                 background-color: $primary-one;
                 color: $secondary-four;
             }

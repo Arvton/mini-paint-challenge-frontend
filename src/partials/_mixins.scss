@@ -40,6 +40,10 @@
 }
 
 // border mixins
-@mixin border-radius {
+@mixin border-radius-button {
     border-radius: 2rem;
+}
+
+@mixin border-radius-card {
+    border-radius: 2.5rem;
 }
