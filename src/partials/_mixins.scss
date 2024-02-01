@@ -39,6 +39,10 @@
     }
 }
 
+@mixin padding-details {
+    padding: 1.5rem 2rem 2rem;
+}
+
 // border mixins
 @mixin border-radius-button {
     border-radius: 2rem;

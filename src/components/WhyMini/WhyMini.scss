@@ -30,7 +30,7 @@
     &__details {
         background-color: $secondary-one;
         @include body-copy;
-        padding: 1rem 2rem 2rem;
+        @include padding-details;
     }
 
     &__cta-container {

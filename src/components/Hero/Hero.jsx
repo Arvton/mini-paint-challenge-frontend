@@ -10,7 +10,7 @@ export default function Hero() {
                     <h2 className="hero__mobile-header">Shrink the canvas. Expand your imagination.</h2>
                     <p className="hero__mobile-details">Create a mini piece of art with me. I will show
                         you how on the Mini Paint Challenge, a free weekly YouTube livestream.</p>
-                    <button className="hero__mobile-cta">Join the challenge</button>
+                    <button className="hero__mobile-cta">Join the Challenge</button>
                 </div>
             </div>
         </section>

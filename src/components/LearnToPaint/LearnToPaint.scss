@@ -26,14 +26,14 @@
         margin-top: 2rem;
     }
     &__details {
-        background-color: $primary-one;
+        background-color: $secondary-one;
         @include body-copy;
-        padding: 1rem 2rem 2rem;
+        @include padding-details;
         border-radius: 0rem 0rem 2.5rem 2.5rem;
     }
 
     &__link {
-        background-color: $primary-one;
+        background-color: $secondary-one;
         text-decoration: underline;
 
         &:hover {

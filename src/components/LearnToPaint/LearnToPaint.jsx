@@ -2,7 +2,7 @@ import Reference from "../../assets/images/mini-paint-challenge-learn-reference.
 import Painting from "../../assets/images/mini-paint-challenge-learn-painting.jpg";
 import "./LearnToPaint.scss";
 
-export default function Hero() {
+export default function LearnToPaint() {
     return (
         <section className="learn-to-paint">
             <div className="learn-to-paint__divider"></div>
