@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect, useState } from "react";
-import "./Modal.scss";
+import "./ModalContainer.scss";
 
 export default function Modal({ isOpen, hasCloseBtn = true, onClose, children }) {
     const [isModalOpen, setIsModalOpen] = useState(isOpen);
