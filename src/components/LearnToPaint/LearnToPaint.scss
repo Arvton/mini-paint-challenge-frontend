@@ -10,7 +10,7 @@
     @include padding-screen;
 
     &__divider {
-        border-top: 1px solid $primary-two;
+        @include border-divider;
     }
 
     &__card {
@@ -18,18 +18,20 @@
         flex-direction: column;
         margin-bottom: 2rem;
     }
+
     &__header {
         background-color: $primary-one;
         @include section-header;
-        padding: 1rem 2rem 0.5rem;
-        border-radius: 2.5rem 2.5rem 0rem 0rem;
+        @include padding-section-header;
+        @include border-radius-top;
         margin-top: 2rem;
     }
+
     &__details {
         background-color: $secondary-one;
         @include body-copy;
         @include padding-details;
-        border-radius: 0rem 0rem 2.5rem 2.5rem;
+        @include border-radius-bottom;
     }
 
     &__link {
