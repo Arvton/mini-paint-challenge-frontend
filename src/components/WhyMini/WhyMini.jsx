@@ -22,7 +22,7 @@ export default function WhyMini() {
                     {"Together, let's take strides towards personal growth."}
                 </p>
                 <div className="why-mini__cta-container">
-                    <button className="why-mini__cta">Try A Mini Painting</button>
+                    <button className="why-mini__cta">Try a Mini Painting</button>
                 </div>
             </div>
         </section>
