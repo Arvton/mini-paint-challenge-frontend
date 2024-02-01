@@ -1,0 +1,64 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+.current-photo {
+    background-color: $primary-four;
+    font-family: "Archivo", sans-serif;
+    color: $primary-three;
+    @include padding-screen;
+
+    &__divider {
+        border-top: 1px solid $primary-two;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        background-color: $primary-one;
+        @include section-header;
+        padding: 1rem 2rem 0.5rem;
+        border-radius: 2.5rem 2.5rem 0rem 0rem;
+        margin-top: 2rem;
+    }
+
+    &__details {
+        background-color: $secondary-one;
+        @include body-copy;
+        @include padding-details;
+    }
+
+    &__cta-container {
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-one;
+        padding: 0rem 2rem;
+        border-radius: 0rem 0rem 2.5rem 2.5rem;
+    }
+
+    &__cta {
+        background-color: $primary-three;
+        @include labels-and-buttons;
+        line-height: 1;
+        padding: 2rem 0rem;
+        @include border-radius-button;
+        margin: 2rem 0rem;
+        cursor: pointer;
+        transition: background-color 0.4s linear;
+
+        &:hover {
+            background-color: $primary-two;
+            color: $secondary-four;
+        }
+
+        &:focus {
+            background-color: $primary-one;
+            color: $secondary-four;
+        }
+    }
+}
