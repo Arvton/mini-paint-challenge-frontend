@@ -42,16 +42,6 @@
             margin: 2rem 0rem;
             cursor: pointer;
             @include button-animation;
-
-            &:hover {
-                background-color: $primary-one;
-                color: $secondary-four;
-            }
-
-            &:focus {
-                background-color: $primary-one;
-                color: $secondary-four;
-            }
         }
     }
 

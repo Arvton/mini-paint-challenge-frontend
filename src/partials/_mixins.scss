@@ -71,4 +71,14 @@
 // animation mixins
 @mixin button-animation {
     transition: background-color 0.4s linear;
+
+    &:hover {
+        background-color: $secondary-two;
+        color: $secondary-four;
+    }
+
+    &:focus {
+        background-color: $secondary-two;
+        color: $secondary-four;
+    }
 }
