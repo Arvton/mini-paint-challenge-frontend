@@ -1,4 +1,5 @@
 import CurrentReference from "../../assets/images/current-reference-photo.png";
+import ButtonCTA from "../ButtonCTA/ButtonCTA";
 import "./CurrentPhoto.scss";
 
 export default function CurrentPhoto() {
@@ -18,7 +19,7 @@ export default function CurrentPhoto() {
                     {"Receive a FREE high-quality reference photo in your inbox when you join the challenge."}
                 </p>
                 <div className="current-photo__cta-container">
-                    <button className="current-photo__cta">Send Me This Photo</button>
+                    <ButtonCTA className="current-photo__cta" content="Send Me This Photo" />
                 </div>
             </div>
         </section>

@@ -1,3 +1,4 @@
+import ButtonCTA from "../ButtonCTA/ButtonCTA";
 import "./WhyMini.scss";
 
 export default function WhyMini() {
@@ -22,7 +23,7 @@ export default function WhyMini() {
                     {"Together, let's take strides towards personal growth."}
                 </p>
                 <div className="why-mini__cta-container">
-                    <button className="why-mini__cta">Try a Mini Painting</button>
+                    <ButtonCTA className="why-mini__cta" content="Try a Mini Painting" />
                 </div>
             </div>
         </section>
