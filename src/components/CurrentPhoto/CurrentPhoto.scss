@@ -10,7 +10,7 @@
     @include padding-screen;
 
     &__divider {
-        border-top: 1px solid $primary-two;
+        @include border-divider;
     }
 
     &__card {
@@ -22,8 +22,8 @@
     &__header {
         background-color: $primary-one;
         @include section-header;
-        padding: 1rem 2rem 0.5rem;
-        border-radius: 2.5rem 2.5rem 0rem 0rem;
+        @include padding-section-header;
+        @include border-radius-top;
         margin-top: 2rem;
     }
 
@@ -38,7 +38,7 @@
         flex-direction: column;
         background-color: $primary-one;
         padding: 0rem 2rem;
-        border-radius: 0rem 0rem 2.5rem 2.5rem;
+        @include border-radius-bottom;
     }
 
     &__cta {
@@ -49,16 +49,6 @@
         @include border-radius-button;
         margin: 2rem 0rem;
         cursor: pointer;
-        transition: background-color 0.4s linear;
-
-        &:hover {
-            background-color: $primary-two;
-            color: $secondary-four;
-        }
-
-        &:focus {
-            background-color: $primary-one;
-            color: $secondary-four;
-        }
+        @include button-animation;
     }
 }

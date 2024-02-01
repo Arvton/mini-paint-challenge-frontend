@@ -1,0 +1,26 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+.faq {
+    background-color: $primary-four;
+    font-family: "Archivo", sans-serif;
+    color: $primary-three;
+    @include padding-screen;
+
+    &__divider {
+        @include border-divider;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        @include section-header;
+        padding: 2rem 2rem 0.5rem;
+    }
+}

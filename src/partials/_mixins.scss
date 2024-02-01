@@ -39,15 +39,46 @@
     }
 }
 
+@mixin padding-section-header {
+    padding: 1rem 2rem 0.5rem;
+}
+
 @mixin padding-details {
     padding: 1.5rem 2rem 2rem;
 }
 
 // border mixins
+@mixin border-divider {
+    border-top: 1px solid $primary-two;
+}
+
 @mixin border-radius-button {
     border-radius: 2rem;
 }
 
 @mixin border-radius-card {
     border-radius: 2.5rem;
+}
+
+@mixin border-radius-top {
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+}
+
+@mixin border-radius-bottom {
+    border-radius: 0rem 0rem 2.5rem 2.5rem;
+}
+
+// animation mixins
+@mixin button-animation {
+    transition: background-color 0.4s linear;
+
+    &:hover {
+        background-color: $secondary-two;
+        color: $secondary-four;
+    }
+
+    &:focus {
+        background-color: $secondary-two;
+        color: $secondary-four;
+    }
 }
