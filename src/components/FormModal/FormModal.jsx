@@ -5,7 +5,7 @@ import './FormModal.scss'
 
 const initialFormData = {
     email: '',
-    weeklyReminders: false,
+    weeklyReminders: true,
 }
 
 export default function FormModal({ isOpen, onClose }) {
@@ -46,31 +46,36 @@ export default function FormModal({ isOpen, onClose }) {
 
     return (
         <ModalContainer hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-            <form onSubmit={handleSubmit}>
-                <div className="form-row">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        ref={focusInputRef}
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                    />
+            <form className="modal__form" onSubmit={handleSubmit}>
+                <div className="modal__form-container">
+                    <h2 className="modal__form-header">Join the Challenge</h2>
+                    <p className="modal__form-details">{"Get this week's reference photo and more Mini Paint Challenge details in your inbox. I'm so excited that you're joining me."}</p>
+                    <div className="modal__email-container">
+                        <input
+                            className="modal__input-email"
+                            ref={focusInputRef}
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            placeholder="Your email address"
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="modal__checkbox-container">
+                        <input
+                            type="checkbox"
+                            id="weeklyReminders"
+                            name="weeklyReminders"
+                            checked={formData.weeklyReminders}
+                            onChange={handleCheckboxChange}
+                        />
+                        <label className="modal__checkbox-text" htmlFor="weeklyReminders">Receive weekly reference photos and challenge reminders.</label>
+                    </div>
                 </div>
-                <div className="form-row">
-                    <label htmlFor="weeklyReminders">Weekly Reminders</label>
-                    <input
-                        type="checkbox"
-                        id="weeklyReminders"
-                        name="weeklyReminders"
-                        checked={formData.weeklyReminders}
-                        onChange={handleCheckboxChange}
-                    />
-                </div>
-                <div className="form-row">
-                    <button type="submit">Submit</button>
+                <div className="modal__form-button-container">
+                    <button className="modal__form-button" type="submit">Submit</button>
                 </div>
             </form>
         </ModalContainer>

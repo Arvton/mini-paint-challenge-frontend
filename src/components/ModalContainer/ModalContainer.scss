@@ -1,19 +1,28 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+// limit styles to the container and positioning of the modal
 .modal {
-    max-width: 20rem;
-    padding: 2rem;
-    border: 0;
-    border-radius: 0.5rem;
-    position: relative;
-    box-shadow: hsl(0 0% 0% / 10%) 0 0 0.5rem 0.25rem;
+    background-color: $primary-one;
+    width: 90%;
+    @include border-radius-card;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     &::backdrop {
-        background: hsl(0 0% 0% / 50%);
+        background: hsl(0 0% 0% / 87%);
     }
 
     &__close-btn {
-        font-size: 0.75em;
+        background-color: $primary-one;
+        font-size: 4rem;
+        color: $primary-three;
         position: absolute;
-        top: 0.25em;
-        right: 0.25em;
+        top: 1.5rem;
+        right: 2rem;
     }
 }

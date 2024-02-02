@@ -38,7 +38,7 @@ export default function Modal({ isOpen, hasCloseBtn = true, onClose, children })
     return (
         <dialog ref={modalRef} onKeyDown={handleEscKeyDown} className="modal">
             {hasCloseBtn && (
-                <button className="modal__close-btn" onClick={handleCloseModal}>X</button>
+                <button className="modal__close-btn" onClick={handleCloseModal}>x</button>
             )}
             {children}
         </dialog>
