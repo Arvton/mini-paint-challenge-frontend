@@ -4,18 +4,41 @@ import LearnToPaint from './components/LearnToPaint/LearnToPaint'
 import WhyMini from './components/WhyMini/WhyMini'
 import CurrentPhoto from './components/CurrentPhoto/CurrentPhoto'
 // import FAQ from './components/FAQ/FAQ'
+import FormModal from './components/FormModal/FormModal'
+import { useState } from 'react'
 import './App.scss'
 
 export default function App() {
 
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false)
+  // const [formData, setFormData] = useState(null)
+
+  const handleOpenFormModal = () => {
+    setIsFormModalOpen(true)
+  }
+
+  const handleCloseFormModal = () => {
+    setIsFormModalOpen(false)
+  }
+
+  // const handleFormModalSubmit = () => {
+    // setFormData(data)
+    // handleCloseFormModal
+  // }
+
   return (
     <>
       <Header />
-      <Hero />
+      <Hero onClick={handleOpenFormModal} />
       <LearnToPaint />
-      <WhyMini />
-      <CurrentPhoto />
+      <WhyMini onClick={handleOpenFormModal} />
+      <CurrentPhoto onClick={handleOpenFormModal} />
       {/* <FAQ /> */}
+      <FormModal
+        isOpen={isFormModalOpen}
+        onClose={handleCloseFormModal}
+        // onSubmit={handleFormModalSubmit}
+      />
     </>
   )
 }

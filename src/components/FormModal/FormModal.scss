@@ -1,0 +1,80 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+.modal {
+  &__form {
+    height: 100%;
+    background-color: $primary-one;
+    @include body-copy;
+    color: $primary-three;
+    padding: 8rem 0rem 0rem;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $secondary-one;
+  }
+
+  &__form-header {
+    background-color: $secondary-one;
+    @include section-header;
+    @include padding-section-header;
+  }
+
+  &__form-details {
+    background-color: $secondary-one;
+    @include padding-details;
+  }
+
+  &__email-container {
+    background-color: $secondary-one;
+    padding: 0rem 2rem 1rem;
+  }
+
+  &__input-email {
+    background-color: $secondary-four;
+    width: 100%;
+    @include body-copy;
+    padding: 1rem 2rem;
+    @include border-radius-button;
+  }
+
+  &__checkbox-container {
+    display: flex;
+    gap: 1rem;
+    background-color: $secondary-one;
+    padding: 0rem 2rem 1rem;
+  }
+
+  &__checkbox-text {
+    background-color: $secondary-one;
+    font-size: 1.75rem;
+  }
+
+  &__form-button-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-one;
+    padding: 0rem 2rem;
+    @include border-radius-bottom;
+  }
+
+  &__form-button {
+    background-color: $primary-three;
+    @include labels-and-buttons;
+    line-height: 1;
+    padding: 2rem 0rem;
+    @include border-radius-button;
+    margin: 2rem 0rem;
+    cursor: pointer;
+    @include button-animation;
+  }
+}
+
+input[type=checkbox] {
+  accent-color: #aa97bd;
+}

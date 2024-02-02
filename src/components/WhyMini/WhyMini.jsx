@@ -1,6 +1,8 @@
+import ButtonCTA from "../ButtonCTA/ButtonCTA";
+import PropTypes from 'prop-types';
 import "./WhyMini.scss";
 
-export default function WhyMini() {
+export default function WhyMini({ onClick }) {
     return (
         <section className="why-mini">
             <div className="why-mini__divider"></div>
@@ -22,9 +24,13 @@ export default function WhyMini() {
                     {"Together, let's take strides towards personal growth."}
                 </p>
                 <div className="why-mini__cta-container">
-                    <button className="why-mini__cta">Try a Mini Painting</button>
+                    <ButtonCTA className="why-mini__cta" content="Try a Mini Painting" onClick={onClick} />
                 </div>
             </div>
         </section>
     )
+}
+
+WhyMini.propTypes = {
+    onClick: PropTypes.func.isRequired,
 }

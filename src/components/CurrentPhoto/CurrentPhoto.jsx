@@ -1,7 +1,9 @@
 import CurrentReference from "../../assets/images/current-reference-photo.png";
+import ButtonCTA from "../ButtonCTA/ButtonCTA";
+import PropTypes from 'prop-types';
 import "./CurrentPhoto.scss";
 
-export default function CurrentPhoto() {
+export default function CurrentPhoto({ onClick }) {
     return (
         <section className="current-photo">
             <div className="current-photo__divider"></div>
@@ -18,9 +20,13 @@ export default function CurrentPhoto() {
                     {"Receive a FREE high-quality reference photo in your inbox when you join the challenge."}
                 </p>
                 <div className="current-photo__cta-container">
-                    <button className="current-photo__cta">Send Me This Photo</button>
+                    <ButtonCTA className="current-photo__cta" content="Send Me This Photo" onClick={onClick} />
                 </div>
             </div>
         </section>
     )
+}
+
+CurrentPhoto.propTypes = {
+    onClick: PropTypes.func.isRequired,
 }

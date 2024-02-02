@@ -1,0 +1,28 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+// limit styles to the container and positioning of the modal
+.modal {
+    background-color: $primary-one;
+    width: 90%;
+    @include border-radius-card;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::backdrop {
+        background: hsl(0 0% 0% / 87%);
+    }
+
+    &__close-btn {
+        background-color: $primary-one;
+        font-size: 4rem;
+        color: $primary-three;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+    }
+}
