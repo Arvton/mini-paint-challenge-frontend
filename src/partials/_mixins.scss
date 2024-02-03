@@ -23,7 +23,7 @@
 
     @include desktop {
         margin: 0 auto;
-        max-width: 136rem;
+        max-width: 128rem;
     }
 }
 
@@ -31,11 +31,11 @@
     padding: 2rem 0rem 2.5rem;
 
     @include tablet {
-        padding: 2.5rem 0rem 0.5rem;
+        padding: 2rem 0rem 3rem;
     }
 
     @include desktop {
-        padding: 4rem 0rem 0.5rem;
+        padding: 4rem 0rem 3rem;
     }
 }
 
