@@ -24,5 +24,11 @@
         position: absolute;
         top: 1.5rem;
         right: 2rem;
+
+        @include tablet {
+            font-size: 6rem;
+            top: 0.5rem;
+            right: 4rem;
+        }
     }
 }
