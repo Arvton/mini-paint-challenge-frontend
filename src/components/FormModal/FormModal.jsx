@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import ModalContainer from '../ModalContainer/ModalContainer'
 import { useState, useEffect, useRef } from 'react'
+import axios from 'axios'
 import './FormModal.scss'
 
 const initialFormData = {
@@ -9,6 +10,7 @@ const initialFormData = {
 }
 
 export default function FormModal({ isOpen, onClose }) {
+    const SIGNUP_URL = import.meta.env.VITE_SIGNUP_URL
     const focusInputRef = useRef(null)
     const [formData, setFormData] = useState(initialFormData)
 
@@ -38,8 +40,13 @@ export default function FormModal({ isOpen, onClose }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // placeholder for form submission
-        console.log(formData)
+        axios.post(SIGNUP_URL, formData)
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.error(err)
+            })
         onClose()
         setFormData(initialFormData)
     }
