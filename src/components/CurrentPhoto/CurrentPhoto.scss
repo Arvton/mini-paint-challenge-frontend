@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 3rem;
+        }
     }
 
     &__header {
@@ -25,6 +29,10 @@
         @include padding-section-header;
         @include border-radius-top;
         margin-top: 2rem;
+
+        @include tablet {
+            margin-top: 3rem;
+        }
     }
 
     &__details {
@@ -39,6 +47,10 @@
         background-color: $primary-one;
         padding: 0rem 2rem;
         @include border-radius-bottom;
+
+        @include tablet {
+            padding: 0rem 4rem;
+        }
     }
 
     &__cta {
@@ -50,5 +62,9 @@
         margin: 2rem 0rem;
         cursor: pointer;
         @include button-animation;
+
+        @include tablet {
+            margin: 2.5rem 0rem;
+        }
     }
 }
