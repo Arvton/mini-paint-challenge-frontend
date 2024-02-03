@@ -11,7 +11,6 @@ import './App.scss'
 export default function App() {
 
   const [isFormModalOpen, setIsFormModalOpen] = useState(false)
-  // const [formData, setFormData] = useState(null)
 
   const handleOpenFormModal = () => {
     setIsFormModalOpen(true)
@@ -20,11 +19,6 @@ export default function App() {
   const handleCloseFormModal = () => {
     setIsFormModalOpen(false)
   }
-
-  // const handleFormModalSubmit = () => {
-    // setFormData(data)
-    // handleCloseFormModal
-  // }
 
   return (
     <>
@@ -37,7 +31,6 @@ export default function App() {
       <FormModal
         isOpen={isFormModalOpen}
         onClose={handleCloseFormModal}
-        // onSubmit={handleFormModalSubmit}
       />
     </>
   )
