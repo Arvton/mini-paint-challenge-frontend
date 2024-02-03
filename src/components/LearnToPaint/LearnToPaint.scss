@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 3rem;
+        }
     }
 
     &__header {
@@ -25,6 +29,25 @@
         @include padding-section-header;
         @include border-radius-top;
         margin-top: 2rem;
+
+        @include tablet {
+            margin-top: 3rem;
+        }
+    }
+
+    &__container-img {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__img {
+        @include tablet {
+            width: 50%;
+        }
     }
 
     &__details {
