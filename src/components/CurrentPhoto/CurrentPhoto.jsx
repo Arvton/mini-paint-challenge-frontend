@@ -1,15 +1,16 @@
-import CurrentReference from "../../assets/images/current-reference-photo.png";
 import ButtonCTA from "../ButtonCTA/ButtonCTA";
 import PropTypes from 'prop-types';
 import "./CurrentPhoto.scss";
 
 export default function CurrentPhoto({ onClick }) {
+    const REFERENCE_PHOTO = import.meta.env.VITE_REFERENCE_PHOTO
+
     return (
         <section className="current-photo">
             <div className="current-photo__divider"></div>
             <div className="current-photo__card">
                 <h2 className="current-photo__header">{"This Week's Reference"}</h2>
-                <img className="current-photo__img" src={CurrentReference} alt="reference photo for the week"></img>
+                <img className="current-photo__img" src={REFERENCE_PHOTO} alt="reference photo for the week"></img>
                 <p className="current-photo__details">
                     {"My goal for the photos is to capture simple subjects. This way we can get to a finished painting faster."}
                     <br /><br />
