@@ -1,0 +1,14 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+// @use '../../partials/typography' as *;
+
+.footer {
+    &__text {
+        font-family: "Archivo", ;
+        font-size: 1.5rem;
+        text-align: center;
+        color: $primary-three;
+        padding: 2rem 0rem 2rem;
+    }
+}

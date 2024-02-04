@@ -6,6 +6,7 @@ import CurrentPhoto from './components/CurrentPhoto/CurrentPhoto'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 // import FAQ from './components/FAQ/FAQ'
 import FormModal from './components/FormModal/FormModal'
+import Footer from './components/Footer/Footer'
 import { useState } from 'react'
 import './App.scss'
 
@@ -38,6 +39,7 @@ export default function App() {
           onClick={handleOpenFormModal} />
       </div>
       {/* <FAQ /> */}
+      <Footer />
       <FormModal
         isOpen={isFormModalOpen}
         onClose={handleCloseFormModal}
