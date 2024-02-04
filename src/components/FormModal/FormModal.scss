@@ -33,6 +33,10 @@
   &__email-container {
     background-color: $secondary-one;
     padding: 0rem 2rem 1rem;
+
+    @include tablet {
+      padding: 0rem 4rem 2rem;
+    }
   }
 
   &__input-email {
@@ -48,11 +52,19 @@
     gap: 1rem;
     background-color: $secondary-one;
     padding: 0rem 2rem 1rem;
+
+    @include tablet {
+      padding: 0rem 4rem 2rem;
+    }
   }
 
   &__checkbox-text {
     background-color: $secondary-one;
     font-size: 1.75rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 
   &__form-button-container {
@@ -61,6 +73,10 @@
     background-color: $primary-one;
     padding: 0rem 2rem;
     @include border-radius-bottom;
+
+    @include tablet {
+      padding: 0rem 4rem;
+    }
   }
 
   &__form-button {
@@ -72,6 +88,10 @@
     margin: 2rem 0rem;
     cursor: pointer;
     @include button-animation;
+
+    @include tablet {
+      margin: 2.5rem 0rem;
+    }
   }
 }
 

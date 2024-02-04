@@ -9,14 +9,24 @@
     color: $primary-three;
     @include padding-screen;
 
+    @include desktop {
+        width: 33.3%;
+        background-color: $secondary-one;
+        padding: 0rem;
+    }
+
     &__divider {
         @include border-divider;
+
+        @include desktop {
+            display: none;
+        }
     }
 
     &__card {
         display: flex;
         flex-direction: column;
-        margin-bottom: 2rem;
+        @include margin-bottom-card;
     }
 
     &__header {
@@ -24,13 +34,18 @@
         @include section-header;
         @include padding-section-header;
         @include border-radius-top;
-        margin-top: 2rem;
+        @include margin-top-section-header;
     }
 
     &__details {
         background-color: $secondary-one;
         @include body-copy;
         @include padding-details;
+
+        @include desktop {
+            padding: 2rem 4rem 3.5rem;
+            @include border-radius-bottom;
+        }
     }
 
     &__cta-container {
@@ -39,6 +54,14 @@
         background-color: $primary-one;
         padding: 0rem 2rem;
         @include border-radius-bottom;
+
+        @include tablet {
+            padding: 0rem 4rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
     }
 
     &__cta {
@@ -50,5 +73,9 @@
         margin: 2rem 0rem;
         cursor: pointer;
         @include button-animation;
+
+        @include tablet {
+            margin: 2.5rem 0rem;
+        }
     }
 }

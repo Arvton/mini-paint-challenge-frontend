@@ -8,8 +8,10 @@ export default function LearnToPaint() {
             <div className="learn-to-paint__divider"></div>
             <div className="learn-to-paint__card">
                 <h2 className="learn-to-paint__header">Learn to Paint</h2>
-                <img className="learn-to-paint__img" src={Reference} alt="Mini Paint Challenge hero image"></img>
-                <img className="learn-to-paint__img" src={Painting} alt="Mini Paint Challenge hero image"></img>
+                <div className="learn-to-paint__container-img">
+                    <img className="learn-to-paint__img" src={Reference} alt="Mini Paint Challenge hero image"></img>
+                    <img className="learn-to-paint__img" src={Painting} alt="Mini Paint Challenge hero image"></img>
+                </div>
                 <p className="learn-to-paint__details">
                     Use my reference photo to finish a mini painting in a 2-3 hour
                     <a className="learn-to-paint__link" target="_blank" rel="noreferrer" href="https://www.youtube.com/playlist?list=PL5bEJWEyy6haAiJ-idr3vbfKRD_2OqsaO"> livestream</a>.
