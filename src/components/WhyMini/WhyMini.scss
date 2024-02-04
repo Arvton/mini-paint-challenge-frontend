@@ -43,6 +43,10 @@
         background-color: $secondary-one;
         @include body-copy;
         @include padding-details;
+
+        @include desktop {
+            @include border-radius-bottom;
+        }
     }
 
     &__cta-container {
