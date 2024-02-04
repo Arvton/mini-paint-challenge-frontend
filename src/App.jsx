@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero'
 import LearnToPaint from './components/LearnToPaint/LearnToPaint'
 import WhyMini from './components/WhyMini/WhyMini'
 import CurrentPhoto from './components/CurrentPhoto/CurrentPhoto'
+import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 // import FAQ from './components/FAQ/FAQ'
 import FormModal from './components/FormModal/FormModal'
 import { useState } from 'react'
@@ -31,6 +32,10 @@ export default function App() {
           <WhyMini onClick={handleOpenFormModal} />
           <CurrentPhoto onClick={handleOpenFormModal} />
         </div>
+        <ButtonCTA
+          className="desktop__cta"
+          content="Send Me A Welcome Package"
+          onClick={handleOpenFormModal} />
       </div>
       {/* <FAQ /> */}
       <FormModal
