@@ -24,9 +24,14 @@ export default function App() {
     <>
       <Header />
       <Hero onClick={handleOpenFormModal} />
-      <LearnToPaint />
-      <WhyMini onClick={handleOpenFormModal} />
-      <CurrentPhoto onClick={handleOpenFormModal} />
+      <div className="desktop">
+        <div className="desktop__divider"></div>
+        <div className="desktop__container">
+          <LearnToPaint />
+          <WhyMini onClick={handleOpenFormModal} />
+          <CurrentPhoto onClick={handleOpenFormModal} />
+        </div>
+      </div>
       {/* <FAQ /> */}
       <FormModal
         isOpen={isFormModalOpen}

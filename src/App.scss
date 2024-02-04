@@ -1,4 +1,5 @@
 @use './partials/variables' as *;
+@use './partials/mixins' as *;
 
 // global style reset
 * {
@@ -25,4 +26,25 @@ input,
 button,
 dialog {
   border: none;
+}
+
+.desktop {
+  @include desktop {
+    @include padding-screen;
+  }
+
+  &__divider {
+    @include desktop {
+      @include border-divider;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 3rem 0rem;
+    }
+  }
 }

@@ -76,6 +76,31 @@
     border-radius: 0rem 0rem 2.5rem 2.5rem;
 }
 
+// margin mixins
+@mixin margin-top-section-header {
+    margin-top: 2rem;
+
+    @include tablet {
+        margin-top: 3rem;
+    }
+
+    @include desktop {
+        margin-top: 0rem;
+    }
+}
+
+@mixin margin-bottom-card {
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 3rem;
+    }
+
+    @include desktop {
+        margin-bottom: 0rem;
+    }
+}
+
 // animation mixins
 @mixin button-animation {
     transition: background-color 0.4s linear;
@@ -84,9 +109,4 @@
         background-color: $secondary-two;
         color: $secondary-four;
     }
-
-    // &:focus {
-    //     background-color: $secondary-two;
-    //     color: $secondary-four;
-    // }
 }

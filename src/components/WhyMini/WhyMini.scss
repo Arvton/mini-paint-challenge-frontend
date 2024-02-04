@@ -9,6 +9,13 @@
     color: $primary-three;
     @include padding-screen;
 
+    @include desktop {
+        width: 33.3%;
+        background-color: $secondary-one;
+        padding: 0rem;
+        @include border-radius-bottom;
+    }
+
     &__divider {
         @include border-divider;
 
@@ -20,11 +27,7 @@
     &__card {
         display: flex;
         flex-direction: column;
-        margin-bottom: 2rem;
-
-        @include tablet {
-            margin-bottom: 3rem;
-        }
+        @include margin-bottom-card;
     }
 
     &__header {
@@ -32,21 +35,13 @@
         @include section-header;
         @include padding-section-header;
         @include border-radius-top;
-        margin-top: 2rem;
-
-        @include tablet {
-            margin-top: 3rem;
-        }
+        @include margin-top-section-header;
     }
 
     &__details {
         background-color: $secondary-one;
         @include body-copy;
         @include padding-details;
-
-        @include desktop {
-            @include border-radius-bottom;
-        }
     }
 
     &__cta-container {
