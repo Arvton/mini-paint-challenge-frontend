@@ -11,6 +11,10 @@
 
     &__divider {
         @include border-divider;
+
+        @include desktop {
+            display: none;
+        }
     }
 
     &__card {
