@@ -61,6 +61,10 @@
   &__checkbox-text {
     background-color: $secondary-one;
     font-size: 1.75rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 
   &__form-button-container {
