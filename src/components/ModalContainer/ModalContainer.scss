@@ -13,6 +13,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @include tablet {
+        width: 50%;
+    }
+
+    @include desktop {
+        width: 40%;
+    }
+
     &::backdrop {
         background: hsl(0 0% 0% / 87%);
     }
