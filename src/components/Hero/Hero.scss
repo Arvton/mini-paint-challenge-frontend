@@ -15,7 +15,6 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 3rem;
-        padding-bottom: 3rem;
     }
 
     &__header {
@@ -29,6 +28,7 @@
 
         @include tablet {
             width: 50%;
+            @include hover-card;
         }
 
         @include desktop {
@@ -56,7 +56,7 @@
         line-height: 1;
         padding: 2rem 0rem;
         @include border-radius-button;
-        margin: 2rem 0rem 2rem;
+        margin: 2rem 0rem 0rem;
         cursor: pointer;
         @include button-animation;
 

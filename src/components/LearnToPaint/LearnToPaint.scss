@@ -8,12 +8,13 @@
     font-family: "Archivo", sans-serif;
     color: $primary-three;
     @include padding-screen;
+    @include border-radius-card;
 
     @include desktop {
         width: 33.3%;
         background-color: $secondary-one;
         padding: 0rem;
-        @include border-radius-bottom;
+        @include hover-card;
     }
 
     &__divider {
@@ -27,7 +28,7 @@
     &__card {
         display: flex;
         flex-direction: column;
-        @include margin-bottom-card;
+        @include border-radius-card;
     }
 
     &__header {
@@ -35,7 +36,6 @@
         @include section-header;
         @include padding-section-header;
         @include border-radius-top;
-        @include margin-top-section-header;
     }
 
     &__container-img {
@@ -55,6 +55,7 @@
         @include tablet {
             width: 50%;
         }
+
         @include desktop {
             width: 100%;
         }

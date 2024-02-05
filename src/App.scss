@@ -46,7 +46,7 @@ dialog {
       display: flex;
       justify-content: space-between;
       gap: 3rem;
-      padding: 3rem 0rem;
+      padding: 0rem 0rem 3rem;
     }
   }
 
@@ -61,7 +61,6 @@ dialog {
       line-height: 1;
       padding: 2rem 0rem;
       @include border-radius-button;
-      margin: 0rem 0rem 3rem;
       cursor: pointer;
       @include button-animation;
     }
