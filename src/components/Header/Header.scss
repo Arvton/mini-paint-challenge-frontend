@@ -1,0 +1,15 @@
+@use '../../partials/variables' as *;
+// @use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+// @use '../../partials/typography' as *;
+
+header {
+    background-color: $primary-four;
+    display: flex;
+    justify-content: space-between;
+    @include padding-screen;
+
+    & img{
+        padding: 1rem 0rem;
+    }
+}

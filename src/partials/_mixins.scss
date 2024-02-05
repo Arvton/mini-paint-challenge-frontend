@@ -1,0 +1,99 @@
+@use './variables' as *;
+
+// responsive design mixins
+@mixin tablet {
+    @media screen and (min-width: $bp-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $bp-desktop) {
+        @content;
+    }
+}
+
+// spacing mixins
+@mixin padding-screen {
+    padding: 0rem 2.5rem;
+
+    @include tablet {
+        padding: 0rem 4.5rem;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+        max-width: 128rem;
+    }
+}
+
+@mixin padding-headline {
+    padding: 2rem 0rem 2.5rem;
+
+    @include tablet {
+        padding: 2rem 0rem 3rem;
+    }
+
+    @include desktop {
+        padding: 4rem 0rem 3rem;
+    }
+}
+
+@mixin padding-section-header {
+    padding: 1rem 2rem 0.5rem;
+
+    @include tablet {
+        padding: 1.5rem 4rem 1rem;
+    }
+}
+
+@mixin padding-details {
+    padding: 1.5rem 2rem 2rem;
+
+    @include tablet {
+        padding: 2rem 4rem 2.5rem;
+    }
+}
+
+// border mixins
+@mixin border-divider {
+    border-top: 1px solid $primary-two;
+    margin: 2rem 0rem;
+
+    @include tablet {
+        margin: 3rem 0rem;
+    }
+}
+
+@mixin border-radius-button {
+    border-radius: 2rem;
+}
+
+@mixin border-radius-card {
+    border-radius: 2.5rem;
+}
+
+@mixin border-radius-top {
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+}
+
+@mixin border-radius-bottom {
+    border-radius: 0rem 0rem 2.5rem 2.5rem;
+}
+
+// animation mixins
+@mixin button-animation {
+    transition: background-color 0.4s linear;
+
+    &:hover {
+        background-color: $secondary-two;
+        color: $secondary-four;
+    }
+}
+
+@mixin hover-card {
+        &:hover {
+            box-shadow: 0rem 0rem 2.5rem 0rem $primary-two;
+            transition: box-shadow 0.3s ease;
+        }
+}

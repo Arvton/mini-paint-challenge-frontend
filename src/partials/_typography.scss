@@ -1,0 +1,65 @@
+@use './mixins' as *;
+
+@mixin page-header {
+    font-family: "Archivo-Black", sans-serif;
+    font-size: 5rem;
+
+    @include tablet {
+        font-size: 6rem;
+    }
+
+    @include desktop {
+        font-size: 6.5rem;
+    }
+}
+
+@mixin section-header {
+    font-family: "Archivo-Black", sans-serif;
+    font-size: 3.75rem;
+
+    @include tablet {
+        font-size: 4.5rem;
+    }
+}
+
+@mixin subheader {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.625rem;
+    font-weight: 600;
+
+    @include tablet {
+        font-size: 1.75rem;
+    }
+}
+
+@mixin body-copy {
+    font-family: "Archivo", sans-serif;
+    font-size: 2rem;
+    line-height: 1.25;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+
+    @include desktop {
+        font-size: 2rem;
+    }
+}
+
+@mixin footer-copy {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.625rem;
+
+    @include tablet {
+        font-size: 1.75rem;
+    }
+}
+
+@mixin labels-and-buttons {
+    font-family: "Archivo-Narrow", sans-serif;
+    font-size: 3rem;
+
+    @include desktop {
+        font-size: 4.5rem;
+    }
+}

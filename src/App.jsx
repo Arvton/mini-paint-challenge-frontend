@@ -1,35 +1,49 @@
+import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
+import LearnToPaint from './components/LearnToPaint/LearnToPaint'
+import WhyMini from './components/WhyMini/WhyMini'
+import CurrentPhoto from './components/CurrentPhoto/CurrentPhoto'
+import ButtonCTA from './components/ButtonCTA/ButtonCTA'
+// import FAQ from './components/FAQ/FAQ'
+import FormModal from './components/FormModal/FormModal'
+import Footer from './components/Footer/Footer'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false)
+
+  const handleOpenFormModal = () => {
+    setIsFormModalOpen(true)
+  }
+
+  const handleCloseFormModal = () => {
+    setIsFormModalOpen(false)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <Hero onClick={handleOpenFormModal} />
+      <div className="desktop">
+        <div className="desktop__divider"></div>
+        <div className="desktop__container">
+          <LearnToPaint />
+          <WhyMini onClick={handleOpenFormModal} />
+          <CurrentPhoto onClick={handleOpenFormModal} />
+        </div>
+        <ButtonCTA
+          className="desktop__cta"
+          content="Send Me A Welcome Package"
+          onClick={handleOpenFormModal} />
       </div>
-      <h1>Vite + React + Mini Paint Challenge</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Placeholder code for the Mini Paint Challenge
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <FAQ /> */}
+      <Footer />
+      <FormModal
+        isOpen={isFormModalOpen}
+        onClose={handleCloseFormModal}
+      />
     </>
   )
 }
-
-export default App

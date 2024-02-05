@@ -1,0 +1,68 @@
+@use './partials/fonts' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/typography' as *;
+
+// global style reset
+* {
+  background-color: $primary-four;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// default font-size is 16px, this sets 1 rem to 8px
+html {
+  font-size: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+button,
+dialog {
+  border: none;
+}
+
+.desktop {
+  @include desktop {
+    @include padding-screen;
+  }
+
+  &__divider {
+    @include desktop {
+      @include border-divider;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0rem 0rem 3rem;
+    }
+  }
+
+  &__cta {
+    display: none;
+
+    @include desktop {
+      display: block;
+      width: 100%;
+      background-color: $primary-three;
+      @include labels-and-buttons;
+      line-height: 1;
+      padding: 2rem 0rem;
+      @include border-radius-button;
+      cursor: pointer;
+      @include button-animation;
+    }
+  }
+}

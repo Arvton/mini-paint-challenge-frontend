@@ -1,0 +1,67 @@
+@use '../../partials/variables' as *;
+@use '../../partials/fonts' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-four;
+    font-family: "Archivo", sans-serif;
+    color: $primary-three;
+    @include padding-screen;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    &__header {
+        @include page-header;
+        line-height: 1.1;
+        @include padding-headline;
+    }
+
+    &__img {
+        @include border-radius-card;
+
+        @include tablet {
+            width: 50%;
+            @include hover-card;
+        }
+
+        @include desktop {
+            width: 60%;
+        }
+    }
+
+    &__container {
+        background-color: $primary-four;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+
+    &__details {
+        @include body-copy;
+    }
+
+    &__cta {
+        background-color: $primary-three;
+        @include labels-and-buttons;
+        line-height: 1;
+        padding: 2rem 0rem;
+        @include border-radius-button;
+        margin: 2rem 0rem 0rem;
+        cursor: pointer;
+        @include button-animation;
+
+        @include tablet {
+            margin: 2rem 0rem 0rem;
+        }
+    }
+}
