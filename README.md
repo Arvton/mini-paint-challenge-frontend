@@ -4,7 +4,7 @@ This is the repository for my BrainStation capstone project.  The live version o
 
 ## What is the project?
 
-This is a landing page for the Mini Paint Challenge. The primary goal is to inform visitors about the challenge.  
+This is a landing page for the Mini Paint Challenge. The primary goal is to inform visitors about the challenge.
 
 Visitors can also sign-up to receive the:
 
@@ -69,7 +69,8 @@ The project uses Mailgun's Email API to manage email lists and sending emails.
 
 This project is not just for the bootcamp. It's a personal project that I'll need to maintain and want to extend. Open up the collapsed sections to check out my ideas.
 
-Frontend
+### Frontend
+
 <details>
 <summary>Create other pages</summary>
 When I wrote up the capstone proposal, there were other pages that could be added to the project. I can add these seprate pages: About, Socials, Gallery, & Collaborators.
@@ -104,7 +105,8 @@ The landing page has a basic design that I'm proud of. I want to try some a bent
 The page is dark themed by default. I would like to add theme responsiveness based on the user's preferences.
 </details>
 
-Backend
+### Backend
+
 <details>
 <summary>Add unsubscribe button to emails</summary>
 This is legally required. It will be set up as another endpoint
