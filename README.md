@@ -1,6 +1,6 @@
 # Mini Paint Challenge -- Client
 
-This is the repository for my BrainStation capstone project.  The live version of the project can be found [here](https://www.minipaintchallenge.com)
+This is the repository for my BrainStation capstone project.  I took down the live version of the project on DigitalOcean on July 2024. I'm still holding on to the domain in case my partner wants it back up.
 
 Here is a link the the [backend repo](https://github.com/Arvton/mini-paint-challenge-backend/tree/main)
 
